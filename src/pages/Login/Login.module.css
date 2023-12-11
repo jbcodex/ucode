@@ -1,0 +1,21 @@
+.login h1{
+   text-align: center;
+   margin-top: 2em;
+}
+
+.errorLogin{
+    max-width: 30%;
+    margin: 0 auto;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+
+.login form{
+    margin-top: 2em;
+}
+
+

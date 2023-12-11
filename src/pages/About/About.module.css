@@ -1,0 +1,27 @@
+.about{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 2em auto;
+
+}
+
+.about p {
+    color:#000000;
+    margin-bottom: 2em;
+    text-align: left;
+  
+    
+}
+
+.about a{
+    display:block;
+    margin-top: 30px;
+    
+}
+
+.about b{
+    color:orange
+}

@@ -1,0 +1,5 @@
+*{margin: 0; padding: 0;}
+.container{
+  min-height: 85vh;
+  margin-bottom: 5em;
+}

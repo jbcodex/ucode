@@ -1,0 +1,46 @@
+.posts{
+    display: flex;
+  
+   flex-direction: column;
+   padding-bottom: 30px;
+   margin-bottom: 30px;
+   border-bottom: 1px solid #eee;
+    width: 50%;
+}
+
+.posts p{
+    text-align: left;
+    margin: 10px 0 10px 0;
+}
+
+.posts img{
+    border-radius:3px
+}
+
+.posts h2{
+ 
+    text-align: left;
+    margin-top: 10px;
+}
+
+.tags{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+}
+
+
+.tags p{
+    background-color: #eee;
+    padding: 4px;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.linkPost{
+    width: 135px;
+    color:#069
+   
+}

@@ -1,0 +1,23 @@
+.register{
+    text-align: center;
+}
+.register p{
+    color:#aaa
+}
+
+.formRegister h1, p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.formRegister form{
+    margin-top: 50px;
+}
+
+.icon{
+    position: relative;
+   
+   
+}

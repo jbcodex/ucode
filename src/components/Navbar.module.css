@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    background-color: #232c34;
+    justify-content: space-between;
+    align-items: center;
+    padding:  1em;
+    border-bottom:2px solid #000;
+ 
+   
+}
+
+.nav_links a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+.brand span{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ff9900;
+}
+
+.brand{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.active{
+  
+ color:#938a7c !important;
+
+    
+}

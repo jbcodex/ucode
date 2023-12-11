@@ -1,0 +1,18 @@
+.search{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+.search p{
+    margin-bottom: 10px;
+    
+
+}
+
+.search h3{
+    margin-top: 50px;
+}

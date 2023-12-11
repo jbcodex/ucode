@@ -1,0 +1,131 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F6FCFF;
+ 
+  }
+
+  input::placeholder,
+  textarea::placeholder{
+    font-family: "Montserrat", sans-serif;
+    color:#aaa;
+  }
+
+  input:focus,
+  textarea:focus{
+    outline: none;
+  }
+
+  a, nav button{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color:black;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+  a:hover, nav button:hover{
+    color: #bbb;
+  }
+
+  /*Forms*/
+
+
+  form{
+    max-width: 30%;
+    margin:0 auto;
+  }
+
+  label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+  }
+
+  label span{
+    margin-bottom: .3em;
+    font-weight: bold;
+  }
+
+  input, textarea{
+    padding: 10px;
+    border: none;
+    border-bottom:1px solid #ccc;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 17px;
+    
+  }
+
+  .btn{
+    display: block;
+    background-color: #1a8918;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 200px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    margin: 20px auto;
+    justify-content: center;
+    
+  }
+
+  
+
+  .btn.btn-outline{
+    background-color: transparent;
+    border-radius: 0;
+    color:#000;
+    border: 1px solid #000;
+    padding: 7px 30px;
+  }
+
+  .btn:hover{
+    background-color: #0f730c;
+   
+  }
+
+  .btn.btn-outline:hover{
+    background-color: #000;
+
+  }
+
+  .btn.btn-danger:hover{
+    background-attachment: #dc3545;
+  }
+
+  button[disabled]{
+    background-color: #aaa;
+    color:#868686
+  }
+  button[disabled]:hover{
+    background-color: #aaa;
+    color:#868686
+  }
+
+  .container .error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
+  .container .sucess{
+    color: #1c7225;
+    background-color: #d9f8d7;
+    border: 1px solid #c7f5c6;
+    padding: 5px;
+    border-radius: 3px;
+   
+  }
+
+

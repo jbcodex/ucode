@@ -1,0 +1,24 @@
+.post{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  
+    margin: 0 auto;
+   
+
+}
+
+.post img{
+    width: 70%;
+
+}
+
+.post p{
+    width: 70%;
+    text-align: left;
+}
+.post h2{
+    margin: 20px auto;
+}
