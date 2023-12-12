@@ -1,26 +1,26 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { useState } from "react";
 import styles from "./Home.module.css";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import FetchPosts from "../../components/FetchPosts";
+
 const Home = () => {
   const [query, setQuery] = useState("");
-  const { documents: posts, loading, error } = useFetchDocuments("posts");
-  const navigate = useNavigate()
+  const { documents: posts, loading, fetchDocuments } = useFetchDocuments("posts");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(query){
-      return navigate(`/search?q=${query}`)
+    if (query) {
+      fetchDocuments(`posts?q=${query}`);
     }
-
   };
+
   return (
     <>
       <div className={styles.home}>
-        <h1>Posts mais recentes 2024</h1>
+        <h1>Posts mais recentes de hoje</h1>
 
         <form onSubmit={handleSubmit} className={styles.search_form}>
           <input
@@ -32,11 +32,12 @@ const Home = () => {
             <IoIosSearch style={{ color: "#fff", fontSize: "18px" }} />
           </button>
         </form>
+
         {loading && <p>Carregando...</p>}
+
         {posts &&
-          posts.map((post) => (
-            <FetchPosts post={post} key={post.id} />
-          ))}
+          posts.map((post) => <FetchPosts post={post} key={post.id} />)}
+
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
             <p>Não foram encontrados Posts</p>
