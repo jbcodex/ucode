@@ -19,7 +19,6 @@ import EditPost from "./pages/EditPost/EditPost.jsx";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-
 //Styles
 import "./App.css";
 

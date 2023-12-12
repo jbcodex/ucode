@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       <div className={styles.home}>
-        <h1>Posts mais recentes</h1>
+        <h1>Posts mais recentes 2023</h1>
 
         <form onSubmit={handleSubmit} className={styles.search_form}>
           <input
