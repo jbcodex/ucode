@@ -25,7 +25,6 @@ import "./App.css";
 function App() {
   const [user, setUser] = useState(undefined);
   const {auth} = userAuthentication()
-  const loadingUser = user === undefined;
 
   useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
@@ -33,31 +32,47 @@ function App() {
     })
   }, [])
 
-  if(loadingUser){
-    return <p>Carregando...</p>;
-  }
   return (
     <>
-     <AuthContextProvider value={{user}}>
-     <BrowserRouter>
-        <Navbar />
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/posts/:id" element={<Post />} />
-            <Route path="/posts/edit/:id" element={!user ? <Register /> : <EditPost />} />
-            <Route path="/register" element={!user ? <Register /> : <Home />} />
-            <Route path="/login" element={ !user ? <Login /> : <Home />} />
-            <Route path="/dashboard" element={!user ? <Login /> : <Dashboard />} />
-            <Route path="/posts/create" element={!user ? <Login /> : <CreatePost />} />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
-     </AuthContextProvider>
-    </>
+    {user ? (
+      <AuthContextProvider value={{ user }}>
+        <BrowserRouter>
+          <Navbar />
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/posts/:id" element={<Post />} />
+              <Route
+                path="/posts/edit/:id"
+                element={!user ? <Register /> : <EditPost />}
+              />
+              <Route
+                path="/register"
+                element={!user ? <Register /> : <Home />}
+              />
+              <Route
+                path="/login"
+                element={!user ? <Login /> : <Home />}
+              />
+              <Route
+                path="/dashboard"
+                element={!user ? <Login /> : <Dashboard />}
+              />
+              <Route
+                path="/posts/create"
+                element={!user ? <Login /> : <CreatePost />}
+              />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </AuthContextProvider>
+    ) : (
+      <p>Carregando...</p>
+    )}
+  </>
   );
 }
 
