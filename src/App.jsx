@@ -23,10 +23,6 @@ import Footer from "./components/Footer";
 //Styles
 import "./App.css";
 
-
-
-
-
 function App() {
   const [user, setUser] = useState(undefined);
   const {auth} = userAuthentication()
@@ -36,7 +32,7 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       setUser(user)
     })
-  }, [auth])
+  }, [])
 
   if(loadingUser){
     return <p>Carregando...</p>;
