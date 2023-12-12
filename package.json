@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "dev": "nodemon src/App.jsx"
+    "dev": "webpack-dev-server --progress --colors --hot --port 8080 --config ./webpack.config.js ",
+    "production": "webpack --progress -p"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
@@ -23,6 +23,15 @@
     "eslint": "^8.53.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4"
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "webpack": "1.14.0",
+    "webpack-dev-server": "3.1.11",
+    "babel-core": "6.22.1",
+    "babel-loader": "6.2.10",
+    "babel-plugin-react-html-attrs": "2.0.0",
+    "babel-plugin-transform-object-rest-spread": "6.22.0",
+    "babel-preset-es2015": "6.22.0",
+    "babel-preset-react": "6.22.0",
+    "extract-text-webpack-plugin": "1.0.1"
   }
 }
